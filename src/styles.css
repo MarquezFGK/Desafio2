@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "C:/Users/Pablo/Documents/Javier/DESAFIO_DAW/desafio2-daw/node_modules/bootstrap/dist/css/bootstrap.css";
+
+*{
+    font-family: 'Cinzel', serif;
+    text-align: center; 
+}
+
+header{
+    width: 100%;
+}

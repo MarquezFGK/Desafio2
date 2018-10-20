@@ -1,0 +1,49 @@
+
+
+<div class="row" >
+<button class="btn btn-primary col-4" (click)="elegir(titulo)" id="ed"> Ordenar Por Titulo  </button>
+<button class="btn btn-primary col-4"  (click)="elegir(editorial)" id="ed2"> Ordenar Por Editorial  </button>
+</div>
+
+<br>
+<br>
+<div class="container">
+
+  <div><h1 id="tt">bienvenido a tu lugar de cuentos, da click en el boton para mostrar los mejores cuentos para niños</h1></div>
+  <div><button class="btn btn-primary"  (click)="elegir(usuarios)" >Mostrar Cuentos</button></div>
+
+</div>
+
+<div class="row" id="usuarios" *ngIf="opcion == usuarios"> 
+    <div class="col-3 usuario " id="cuadro"  *ngFor="let usuario of usuarios" (click)="ver(usuario, usuarioModal)"> <a href="#"> <div><img class="img-fluid" id="imagen" src="{{usuario.img}}" alt=""> </div></a> {{usuario.titulo}} </div>
+  </div>
+
+  
+  <div class="row" id="usuarios" *ngIf="opcion == titulo"> 
+    <div class="col-3 usuario " id="cuadro"  *ngFor="let usuario of usutit" (click)="ver(usuario, usuarioModal)"> <a href="#"> <div><img class="img-fluid" id="imagen" src="{{usuario.img}}" alt=""> </div></a> {{usuario.titulo}} </div>
+  </div>
+
+
+  <div class="row" id="usuarios" *ngIf="opcion == editorial"> 
+    <div class="col-3 usuario " id="cuadro"  *ngFor="let usuario of usueditorial" (click)="ver(usuario, usuarioModal)"> <a href="#"> <div><img class="img-fluid" id="imagen" src="{{usuario.img}}" alt=""> </div></a> {{usuario.titulo}} </div>
+  </div>
+
+<ng-template #usuarioModal class="modal">
+    <div class="modal-header">
+    <div>
+        <h4 class="modal-title">
+        <div><h1>{{usuario.titulo}} </h1></div>
+      </h4>
+    </div>
+    </div>
+    <div class="modal-body">
+      <h4 class="modal-title">
+        <a href=""><img id="imagenM" class="img-responsive" src="{{usuario.img}}" alt=""></a>
+      </h4>
+        <div> <h3>Autor: </h3> {{usuario.autor}} </div>
+      <div> <h3>Editorial: </h3> {{usuario.editorial}} </div>
+      <div> <h3>Descripcion: </h3> {{usuario.descripcion}}</div>
+    </div>
+    <div class="modal-footer">
+    </div>
+  </ng-template>
