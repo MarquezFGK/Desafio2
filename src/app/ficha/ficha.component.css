@@ -1,6 +1,5 @@
 
-
-#ed{
+#ed3{
 
     margin-top: 10px;
     margin-left: 210px;
@@ -8,9 +7,24 @@
 
 }
 
-#ed2{
+#ed4{
     margin-top: 10px;
     margin-left: 10px;
+    margin-right: 10px; 
+
+}
+
+#ed{
+
+    margin-top: 10px;
+    margin-left: 465px;
+    margin-right: 10px;   
+
+}
+
+#ed2{
+    margin-top: 10px;
+    margin-left: 465px;
     margin-right: 10px; 
 
 }
