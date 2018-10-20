@@ -10,11 +10,11 @@
 <div class="container">
 
   <div><h1 id="tt">bienvenido a tu lugar de cuentos, da click en el boton para mostrar los mejores cuentos para niños</h1></div>
-  <div><button class="btn btn-primary"  (click)="elegir(usuarios)" >Mostrar Cuentos</button></div>
+  <div><button class="btn btn-primary"  (click)="elegir(usuario)" >Mostrar Cuentos</button></div>
 
 </div>
 
-<div class="row" id="usuarios" *ngIf="opcion == usuarios"> 
+<div class="row" id="usuarios" *ngIf="opcion == usuario"> 
     <div class="col-3 usuario " id="cuadro"  *ngFor="let usuario of usuarios" (click)="ver(usuario, usuarioModal)"> <a href="#"> <div><img class="img-fluid" id="imagen" src="{{usuario.img}}" alt=""> </div></a> {{usuario.titulo}} </div>
   </div>
 
