@@ -1,30 +1,31 @@
 
 
-<div class="row" >
-<button class="btn btn-primary col-4" (click)="elegir(titulo)" id="ed"> Ordenar Por Titulo  </button>
-<button class="btn btn-primary col-4"  (click)="elegir(editorial)" id="ed2"> Ordenar Por Editorial  </button>
-</div>
-
 <br>
 <br>
 <div class="container">
 
   <div><h1 id="tt">bienvenido a tu lugar de cuentos, da click en el boton para mostrar los mejores cuentos para niños</h1></div>
-  <div><button class="btn btn-primary"  (click)="elegir(usuario)" >Mostrar Cuentos</button></div>
-
+  <div class="row" >
+    <button class="btn btn-primary col-4" id="ed3"><a href="#edi">Ordenar Por Titulo</a></button>
+     <button class="btn btn-primary col-4" id="ed4"> <a href="#edi2">Ordenar Por Titulo</a></button>
+    </div>
 </div>
 
-<div class="row" id="usuarios" *ngIf="opcion == usuario"> 
+<div class="row" id="usuarios" > 
     <div class="col-3 usuario " id="cuadro"  *ngFor="let usuario of usuarios" (click)="ver(usuario, usuarioModal)"> <a href="#"> <div><img class="img-fluid" id="imagen" src="{{usuario.img}}" alt=""> </div></a> {{usuario.titulo}} </div>
   </div>
 
-  
-  <div class="row" id="usuarios" *ngIf="opcion == titulo"> 
+  <div class="row" >
+    <button class="btn btn-primary col-4" (click)="elegir(titulo)"  id="ed"><a name="edi" id="edi">Ordenar Por Titulo</a></button>
+  </div>  
+  <div class="row" id="usuarios" > 
     <div class="col-3 usuario " id="cuadro"  *ngFor="let usuario of usutit" (click)="ver(usuario, usuarioModal)"> <a href="#"> <div><img class="img-fluid" id="imagen" src="{{usuario.img}}" alt=""> </div></a> {{usuario.titulo}} </div>
   </div>
 
-
-  <div class="row" id="usuarios" *ngIf="opcion == editorial"> 
+  <div class="row" >
+    <button class="btn btn-primary col-4"  (click)="elegir(editorial)" id="ed2"> <a  name="edi2" id="edi">Ordenar Por Editorial</a></button>
+    </div>
+  <div class="row" id="usuarios" > 
     <div class="col-3 usuario " id="cuadro"  *ngFor="let usuario of usueditorial" (click)="ver(usuario, usuarioModal)"> <a href="#"> <div><img class="img-fluid" id="imagen" src="{{usuario.img}}" alt=""> </div></a> {{usuario.titulo}} </div>
   </div>
 
